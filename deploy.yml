@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: veer-deployment
   labels:
-    app: nginx
+    app: veer
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: veer
   template:
     metadata:
       labels:
-        app: nginx
+        app: veer
     spec:
       containers:
-      - name: nginx
-        image: <img name>
+      - name: veer
+        image: veer2/app1-test
         ports:
         - containerPort: 80
